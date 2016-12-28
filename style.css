@@ -54,6 +54,13 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 }
 
+h1, h2, h3, h5, h6 {
+	color: #fff;
+	font-weight: 600;
+	line-height: 1.65;
+	margin: 0 0 1em 0;
+}
+
 /**************************************************************
 
 H E A D E R
@@ -134,12 +141,25 @@ B A N N E R
 	margin: 0 auto;
 }
 
+div.art-text {
+	width: -moz-max-content;
+	width: -webkit-max-content;
+	width: -ms-max-content;
+	width: max-content;
+}
+
 .art-text>h1 {
 	font-size: 1.6em;
 	font-weight: 600;
 	line-height: 1.65;
 	margin: 0 0 1em 0;
 }
+.art-text > :first-child {
+	margin-bottom: 0;
+	width: calc(100% + 0.5em);
+	font-size: 1.5em;
+}
+
 
 .content {
 	display: block;
@@ -180,6 +200,7 @@ B O D Y
 
 body {
 	min-width: 320px;
+	background-color: #242943;
 }
 
 .wrapper {
@@ -301,6 +322,7 @@ article:nth-child(6n-5)::before {
 	font-size: 1.5em;
 	width: calc(100% + 0.5em);
 }
+
 .art-text>p {
 	color: #fff;
 	opacity: 0;
