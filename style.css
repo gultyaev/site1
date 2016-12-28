@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**************************************************************
+
+G E N E R A L
+
+**************************************************************/
+
+/* FONTS */
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+}
+
+/* HEAD */
+.header {
+	height: 2.75em;
+	font-weight: 600;
+	line-height: 2.75em;
+	letter-spacing: 0.25em;
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+}
+
+.logo-link {
+	display: inline-block;
+	font-size: 0.8em;
+	padding: 0 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.logo-link>span {
+	background: #fff;
+	color: #242943;
+	line-height: 1.65em;
+	margin-right: 0.325em;
+	letter-spacing: 0.1em;
+	padding: 0 0.125em 0 0.375em;
+	font-weight: 600;
+}
+
+/* BODY */
+body {
+	min-width: 320px;
+}
+
+.wrapper {
+	padding-top: 2.75em;
+}
+
+.row::before,
+.row::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+article {
+	float: left;
+	width: 100%;
+	min-height: 20em;
+	max-height: 30em;
+	position: relative;
+	
+	background-position: center, center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	display: flex;
+	align-items: center;
+}
+
+article::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.85;
+	top: 0;
+	right: 0;
+	transition: height 0.3s, opacity 0.7s;
+	z-index: 2;
+}
+article:hover::before,
+article:hover::after {
+	height: 0;
+	opacity: 0;
+}
+
+article::after {
+	content: "";
+	background-color: rgba(36, 41, 67, 0.25);
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.85;
+	top: 0;
+	right: 0;
+	transition: height 0.3s, opacity 0.7s;
+	z-index: 1;
+}
+
+article:nth-child(6n) {
+	background-image: url(images/pic06.jpg);
+}
+article:nth-child(6n-1) {
+	background-image: url(images/pic05.jpg);
+}
+article:nth-child(6n-2) {
+	background-image: url(images/pic04.jpg);
+}
+article:nth-child(6n-3) {
+	background-image: url(images/pic03.jpg);
+}
+article:nth-child(6n-4) {
+	background-image: url(images/pic02.jpg);
+}
+article:nth-child(6n-5) {
+	background-image: url(images/pic01.jpg);
+}
+
+article:nth-child(6n)::before {
+	background-color: #87c5a4;
+}
+article:nth-child(6n-1)::before {
+	background-color: #8ea9e8;
+}
+article:nth-child(6n-2)::before {
+	background-color: #e7b788;
+}
+article:nth-child(6n-3)::before {
+	background-color: #ec8d81;
+}
+article:nth-child(6n-4)::before {
+	background-color: #8d82c4;
+}
+article:nth-child(6n-5)::before {
+	background-color: #6fc3df;
+}
+
+.art-text {
+	margin-left: 2em;
+	position: relative;
+	z-index: 3;
+}
+
+.art-text a{
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+.art-text>h3 {
+	color: #fff;
+	font-size: 1.5em;
+	width: calc(100% + 0.5em);
+}
+.art-text>p {
+	color: #fff;
+	opacity: 0;
+	font-size: 0.7em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	transition: opacity 0.25s;
+}
+
+.art-text> :first-child::after {
+	content: "";
+	background-color: #fff;
+	display: block;
+	height: 2px;
+	width: calc(100% + 0.5em);
+	margin: 0.325em 0 0.5em 0;
+	
+	transition: width 0.25s;
+}
+
+article:hover .art-text>p {
+	opacity: 1;
+}
