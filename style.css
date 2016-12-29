@@ -64,6 +64,11 @@ h1, h2, h3, h5, h6 {
 	margin: 0 0 1em 0;
 }
 
+body, input, select, textarea {
+	color: #fff;
+	letter-spacing: 0.025em;
+	line-height: 1.65;
+}
 /**************************************************************
 
 H E A D E R
@@ -115,10 +120,7 @@ B A N N E R
 	position: relative;
 	top: -2.75em;
 	margin-bottom: -2.75em;
-	background-attachment: scroll;
-	background-image: url(images/banner.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
+	background: url(images/banner.jpg) no-repeat scroll center;
 	background-size: cover;
 }
 .banner::after {
@@ -134,10 +136,14 @@ B A N N E R
 	z-index: 1;
 }
 
+.banner .inner {
+	padding: 0 !important;
+}
+
 .inner {
 	width: calc(100% - 3em);
 	max-width: 65em;
-	padding: 0 !important;
+	padding: 3em 0 1em 0;
 	position: relative;
 	z-index: 2;
 	color: #fff;
@@ -179,6 +185,7 @@ div.art-text {
 	outline: none;
 	border: 2px solid #fff;
 	transition: 0.3s;
+	margin: 0 0 2em 0;
 }
 .get-started:hover {
 	color: aquamarine;
@@ -358,4 +365,111 @@ article:hover .art-text>p {
 	left: 0;
 	z-index: 4;
 	outline: none;
+}
+
+.main {
+	background-color: #2a2f4a;
+}
+
+/**************************************************************
+
+F O O T E R
+
+**************************************************************/
+
+p {
+	margin: 0 0 2em 0;
+}
+
+.contacts {
+	border-bottom: 1px solid rgba(212, 212, 255, 0.1);
+	overflow-x: hidden;
+}
+
+.contacts>.inner>:nth-child(2n-1) {
+	padding: 3em 0 1em 0;
+}
+
+/**************************************************************
+
+I N P U T + L A B E L
+
+**************************************************************/
+
+label {
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+input {
+	color: #fff;
+	background-color: #2a2f4a;
+	display: block;
+	width: 100%;
+	outline: none;
+	border: 2px solid transparent;
+	padding: 0.3em 0.7em;
+	height: 2.75em;
+	font-size: 12pt;
+}
+input:focus,
+textarea:focus {
+	border: 2px solid aquamarine;
+	outline: none;
+}
+
+.inp {
+	margin-bottom: 1.5em;
+}
+
+textarea {
+	padding: 0.75em 1em;
+	width: 100%;
+	font-size: 12pt;
+	color: #fff;
+	background-color: #2a2f4a;
+	display: block;
+	border: 2px solid transparent;
+}
+
+/**************************************************************
+
+B U T T O N S
+
+**************************************************************/
+
+button[type="submit"] {
+	float: left;
+	background-color: #ffffff;
+	box-shadow: none;
+	color: #242943;
+}
+button[type="submit"]:hover {
+	background-color: aquamarine;
+}
+
+button[type="reset"] {
+	float: right;
+	background-color: #242943;
+	box-shadow: none;
+	color: #fff;
+}
+button[type="reset"]:hover {
+	color: aquamarine;
+}
+
+button {
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.5em;
+	letter-spacing: 0.25em;
+	line-height: 3.5em;
+	padding: 0 1.75em;
+	outline: 3px solid #fff;
+	border: none;
+	cursor: pointer;
+	transition: 0.25s;
+}
+button:hover {
+	outline: 3px solid aquamarine;
 }
