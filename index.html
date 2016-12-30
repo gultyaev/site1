@@ -10,9 +10,13 @@
 <body>
 	<div class="wrapper">
 		
-		<header class="header">
+		<header class="header" id="nav">
+			<div class="row">
 			<a class="logo-link" href="#"><span>forty</span></a>
-			<nav></nav>			
+			<nav>
+				<span class="nav-icon fa-bars"></span>
+			</nav>		
+			</div>	
 		</header>
 		
 		<section class="banner">
@@ -85,7 +89,7 @@
 		</section>
 		
 		<section class="contacts">
-			<div class="inner">
+			<div class="inner" style="padding: 0;">
 				<section>
 					<form action="#" method="post">
 						<div class="inp">
@@ -108,13 +112,40 @@
 					</form>
 				</section>
 				<section class="split">
-					<section></section>
-					<section></section>
-					<section></section>
+					<section>
+						<div>
+							<span class="icon fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="#">information@untitled.tld</a>
+						</div>
+					</section>
+					<section>
+						<div>
+							<span class="icon fa-phone"></span>
+							<h3>Phone</h3>
+							<span style="font-family:arial;">+38(066)154675</span>
+						</div>
+					</section>
+					<section>
+						<div>
+							<span class="icon fa-home"></span>
+							<h3>Address</h3>
+							<span style="font-family:arial;">
+								1324 Somewhere Road #5432 <br>
+								Nashville, TN 00000 <br>
+								Gde to
+							</span>
+						</div>
+					</section>
 				</section>
 			</div>
 		</section>
-		
+		<footer>
+				<p>&copy; Me 2016</p>
+		</footer>
 	</div>
+	
+	<script src="menu.js"></script>
+	
 </body>
 </html>

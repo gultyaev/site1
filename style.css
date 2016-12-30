@@ -46,7 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+a {
+	color: inherit;
+	text-decoration: none;
+}
 /**************************************************************
 
 F O N T S
@@ -75,6 +78,11 @@ H E A D E R
 
 **************************************************************/
 
+*:selected {
+	color: aquamarine;
+	border-color: #fff;
+}
+
 .header {
 	height: 2.75em;
 	font-weight: 600;
@@ -92,6 +100,7 @@ H E A D E R
 	padding: 0 1em;
 	text-decoration: none;
 	text-transform: uppercase;
+	float: left;
 }
 .logo-link>span {
 	background: #fff;
@@ -106,6 +115,28 @@ H E A D E R
 }
 .logo-link:hover >span {
 	background-color: aquamarine;
+}
+
+.nav-icon {
+	float: right;
+	display: block;
+	content: "";
+	font-size: 1.5em;
+	font-weight: 300;
+	height: 2.75rem;
+	width: 2.75rem;
+	line-height: 2.75rem;
+	font-family: FontAwesome;
+	text-align: center;
+	transition: color 0.25s;
+}
+.nav-icon:hover {
+	cursor: pointer;
+	color: aquamarine;
+}
+
+#nav {
+	transition: 0.25s;
 }
 
 /**************************************************************
@@ -215,7 +246,7 @@ B O D Y
 **************************************************************/
 
 body {
-	min-width: 320px;
+	min-width: 378px;
 	background-color: #242943;
 }
 
@@ -408,10 +439,58 @@ p {
 }
 
 .split {
-	padding: 0;
+	position: relative;
 	width: 100%;
 }
+.split>* {
+	position: relative;
+	padding: 3em 0 1em 0;
+}
 
+.split section div {
+	position: relative;
+	margin: 0 0 2em 0;
+	padding-left: 3.25em;
+}
+
+.split section div a {
+	display: inline-block;
+	border-bottom: 1px dotted #fff;
+}
+.split section::before {
+	content: "";
+	display: block;
+	margin-left: -3em;
+	width: calc(100vw + 3em);
+	height: 1px;
+	background: rgba(212, 212, 255, 0.1);
+	position: absolute;
+	top: 0;
+}
+
+.icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.icon::before {
+	display: block;
+	content: "";
+	color: #242943;
+	background-color: #fff;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	font-family: FontAwesome;
+	border-radius: 100%;
+	text-align: center;
+}
+footer p {
+	padding: 1em;
+	text-align: center;
+	margin: 0;
+}
 /**************************************************************
 
 I N P U T + L A B E L
@@ -485,14 +564,13 @@ button {
 	font-weight: 600;
 	height: 3.5em;
 	letter-spacing: 0.25em;
-	line-height: 3.5em;
+	line-height: 3em;
 	padding: 0 1.75em;
-	outline: 3px solid #fff;
-	border: none;
+	border: 3px solid #fff;;
 	cursor: pointer;
-	-webkit-transition: 0.25s;
-	transition: 0.25s;
+	-webkit-transition: color 0.25s, background 0.25s, border 0.25s;
+	transition: color 0.25s, background 0.25s, border 0.25s;
 }
 button:hover {
-	outline: 3px solid aquamarine;
+	border: 3px solid aquamarine;
 }
