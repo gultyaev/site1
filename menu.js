@@ -8,3 +8,13 @@ function scroll() {
 }
 
 window.onscroll = scroll;
+
+
+function scrollMe() {	
+		var scroll = setInterval(function() {
+			window.scrollTo(0, window.pageYOffset - 6);
+			if (window.pageYOffset == 0) {
+		clearInterval(scroll);
+	}
+		}, 1);
+}

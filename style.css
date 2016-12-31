@@ -574,3 +574,16 @@ button {
 button:hover {
 	border: 3px solid aquamarine;
 }
+
+/**************************************************************
+
+M E D I A S C R E E N
+
+**************************************************************/
+
+@media screen (min-width: 700px) {
+	article {
+		display: block;
+		width: 50%;
+	}
+}
