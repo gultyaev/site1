@@ -158,6 +158,10 @@ B A N N E R
 	margin-bottom: -2.75em;
 	background: url(images/banner.jpg) no-repeat scroll center;
 	background-size: cover;
+	height: 75vh;
+	min-height: 30em;
+	max-height: 50em;
+	
 }
 .banner::after {
 	content: "";
@@ -581,9 +585,56 @@ M E D I A S C R E E N
 
 **************************************************************/
 
-@media screen (min-width: 700px) {
+@media screen and (min-width: 700px) {
+	.banner h1 {
+		font-size: 3.25em;
+	}
+	.banner p {
+		float: left; 
+	}
+	.banner .get-started {
+		float: right;
+	}
 	article {
-		display: block;
 		width: 50%;
+	}
+	.art-text>:first-child {
+		width: auto;
+	}
+	.banner {
+		padding: 6em 0 2em 0;
+	}
+	.banner>.inner .art-text {
+		width: auto;
+	}
+	.inner {
+		width: calc(100% - 6em);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	article {
+		width: 40%;
+	}
+	article:nth-child(4n-1),
+	article:nth-child(4n-2) {
+		width: 60%;
+	}
+	.contacts>.inner>.sct {
+		padding: 4em 3em 2em 0;
+		border-right: 1px solid rgba(212, 212, 255, 0.1);
+		width: 60%;
+		float: left;
+	}
+	.contacts>.inner>.split {
+		width: 40%;
+		float: right;
+		padding: 0;
+	}
+	.split>* {
+		padding: 3em 0 1em 3em;
+	}
+	.split>*:first-child::before {
+		background: transparent;
 	}
 }
