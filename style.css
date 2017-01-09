@@ -149,7 +149,18 @@ H E A D E R
 	left: 0;
 	background-color: rgba(36, 41, 67, 0.94);
 	text-transform: uppercase;
-	transition: 0.25s;
+	transition: 1s;
+}
+.nav::before {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	filter: blur(5px);
 }
 
 .nav ul {
