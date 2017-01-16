@@ -1,0 +1,8 @@
+.unloaded {
+	color: transparent;
+	padding-left: 0;
+}
+.banner, .header {
+	-webkit-transition: color 0.5s, padding-left 0.5s;
+	transition: color 0.5s, padding-left 0.5s;
+}

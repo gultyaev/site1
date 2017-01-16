@@ -1,0 +1,35 @@
+label {
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+input {
+	color: #fff;
+	background-color: #2a2f4a;
+	display: block;
+	width: 100%;
+	outline: none;
+	border: 2px solid transparent;
+	padding: 0.3em 0.7em;
+	height: 2.75em;
+	font-size: 12pt;
+}
+input:focus,
+textarea:focus {
+	border: 2px solid aquamarine;
+	outline: none;
+}
+
+.inp {
+	margin-bottom: 1.5em;
+}
+
+textarea {
+	padding: 0.75em 1em;
+	width: 100%;
+	font-size: 12pt;
+	color: #fff;
+	background-color: #2a2f4a;
+	display: block;
+	border: 2px solid transparent;
+}

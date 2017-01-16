@@ -1,0 +1,66 @@
+p {
+	margin: 0 0 2em 0;
+}
+
+.contacts {
+	border-bottom: 1px solid rgba(212, 212, 255, 0.1);
+	overflow-x: hidden;
+}
+
+.contacts>.inner>:nth-child(2n-1) {
+	padding: 3em 0 1em 0;
+}
+
+.split {
+	position: relative;
+	width: 100%;
+}
+.split>* {
+	position: relative;
+	padding: 3em 0 1em 0;
+}
+
+.split section div {
+	position: relative;
+	margin: 0 0 2em 0;
+	padding-left: 3.25em;
+}
+
+.split section div a {
+	display: inline-block;
+	border-bottom: 1px dotted #fff;
+}
+.split section::before {
+	content: "";
+	display: block;
+	margin-left: -3em;
+	width: calc(100vw + 3em);
+	height: 1px;
+	background: rgba(212, 212, 255, 0.1);
+	position: absolute;
+	top: 0;
+}
+
+.icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.icon::before {
+	display: block;
+	content: "";
+	color: #242943;
+	background-color: #fff;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	font-family: FontAwesome;
+	border-radius: 100%;
+	text-align: center;
+}
+footer p {
+	padding: 1em;
+	text-align: center;
+	margin: 0;
+}
