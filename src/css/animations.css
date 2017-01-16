@@ -1,8 +1,9 @@
-.unloaded {
-	color: transparent;
+.load,
+.load * {
 	padding-left: 0;
+	color: transparent !important;
+	border-color: transparent !important;
 }
-.banner, .header {
-	-webkit-transition: color 0.5s, padding-left 0.5s;
-	transition: color 0.5s, padding-left 0.5s;
+.load .art-text> :firstchild::after {
+	background-color: transparent;
 }

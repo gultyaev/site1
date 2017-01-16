@@ -14,6 +14,7 @@
 	height: 75vh;
 	min-height: 30em;
 	max-height: 50em;
+	transition: color 1s;
 	
 }
 .banner::after {
@@ -39,7 +40,6 @@
 	padding: 3em 0 1em 0;
 	position: relative;
 	z-index: 2;
-	color: #fff;
 	margin: 0 auto;
 }
 
