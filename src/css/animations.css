@@ -1,8 +1,11 @@
 @keyframes anim {
-	from {transform: translateY(-100%)}
+	from {transform: translateY(-100%);}
 	to {transform: translateY(0);}
 }
-
+@keyframes op {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
 .load,
 .load * {
 	padding-left: 0;
@@ -15,4 +18,7 @@
 
 .scrolled-menu {
 	animation: anim 0.3s;
+}
+.op-menu {
+	animation: op 0.2s;
 }
