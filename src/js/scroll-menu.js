@@ -1,9 +1,13 @@
 function scroll() {
-	var y = window.pageYOffset;
-	if (y > 400) {
-		document.getElementById('nav').style = "position: fixed; background: #242943;";
+	var y = window.pageYOffset,
+			height = document.querySelector('.banner').offsetHeight - document.querySelector('.header').offsetHeight,
+			nav = document.getElementById('nav');
+	if (y > height) {
+		nav.style = "position: fixed; background: #242943;";
+		nav.classList.add('scrolled-menu');
 	} else {
-		document.getElementById('nav').style = "position: absolute; background: transparent;";
+		nav.style = "position: absolute; background: transparent;";
+		nav.classList.remove('scrolled-menu');
 	}
 }
 

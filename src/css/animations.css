@@ -1,3 +1,8 @@
+@keyframes anim {
+	from {transform: translateY(-100%)}
+	to {transform: translateY(0);}
+}
+
 .load,
 .load * {
 	padding-left: 0;
@@ -6,4 +11,8 @@
 }
 .load .art-text> :firstchild::after {
 	background-color: transparent;
+}
+
+.scrolled-menu {
+	animation: anim 0.3s;
 }
