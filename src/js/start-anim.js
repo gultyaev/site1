@@ -5,6 +5,6 @@ window.addEventListener('load', function () {
 		el.classList.remove('load');
 		});
 	}
-
+	
 	setTimeout(removeClass, 2000);
 });
